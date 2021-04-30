@@ -4,12 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         tools:context="com.example.marty.encryptdemo.MainActivity">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher_foreground" />
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,6 +29,8 @@
                 android:layout_height="wrap_content"
                 android:hint="Text to be encrypted"
                 android:id="@+id/t_e_text"/>
+
+
         </android.support.design.widget.TextInputLayout>
 
         <TextView
@@ -41,13 +52,16 @@
             style="@style/Base.Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:layout_below="@+id/key_layout"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:layout_gravity="center_horizontal"
             android:onClick="doHardCrypt"
             android:tag="e"
-            android:text="Encrypt using app instance" />
+            android:text="Encrypt using app instance"
+            <item android:state_pressed="true" android:color="#cc7722"/>
+             <item android:color="#cc7722/>/>
 
     </LinearLayout>
 </ScrollView>
